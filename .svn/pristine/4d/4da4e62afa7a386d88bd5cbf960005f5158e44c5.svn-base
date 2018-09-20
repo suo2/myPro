@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_bg"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_banner"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/main_margin_2x"
+                android:layout_marginRight="@dimen/main_margin_2x"
+                android:background="@drawable/charger_station_detail_img_num_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/main_padding_0.5x">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="共"
+                    android:textColor="@color/text_color_ffffff"
+                    android:textSize="@dimen/textsize_11sp" />
+
+                <TextView
+                    android:id="@+id/tv_current_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@color/text_color_ffffff"
+                    android:textSize="@dimen/textsize_11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" / "
+                    android:textColor="@color/text_color_ffffff"
+                    android:textSize="@dimen/textsize_11sp" />
+
+                <TextView
+                    android:id="@+id/tv_total_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textColor="@color/text_color_ffffff"
+                    android:textSize="@dimen/textsize_11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="张"
+                    android:textColor="@color/text_color_ffffff"
+                    android:textSize="@dimen/textsize_11sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/main_margin_1x"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/main_padding_1x"
+            android:paddingRight="@dimen/main_padding_1x"
+            android:paddingTop="@dimen/main_padding_1.5x">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/main_margin_1x">
+
+                <TextView
+                    android:id="@+id/tv_address_headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/charger_icon_address"
+                    android:drawablePadding="@dimen/main_padding_0.5x"
+                    android:gravity="center"
+                    android:text="@string/charger_station_detail_address_"
+                    android:textColor="@color/text_color_333333"
+                    android:textSize="@dimen/textsize_13sp" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/main_margin_0.5x"
+                    android:layout_toRightOf="@id/tv_address_headline"
+                    android:text="成都双流机场"
+                    android:textColor="@color/text_color_333333"
+                    android:textSize="@dimen/textsize_13sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/main_margin_1x">
+
+                <TextView
+                    android:id="@+id/tv_operators_headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/charger_icon_operators"
+                    android:drawablePadding="@dimen/main_padding_0.5x"
+                    android:gravity="center"
+                    android:text="@string/charger_station_detail_opreators_"
+                    android:textColor="@color/text_color_333333"
+                    android:textSize="@dimen/textsize_13sp" />
+
+                <TextView
+                    android:id="@+id/tv_operators"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/main_margin_0.5x"
+                    android:layout_toRightOf="@id/tv_operators_headline"
+                    android:text="自营"
+                    android:textColor="@color/text_color_333333"
+                    android:textSize="@dimen/textsize_13sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/main_margin_1x">
+
+                <TextView
+                    android:id="@+id/tv_distance_headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/charger_icon_distance"
+                    android:drawablePadding="@dimen/main_padding_0.5x"
+                    android:gravity="center"
+                    android:text="@string/charger_station_detail_distance_"
+                    android:textColor="@color/text_color_333333"
+                    android:textSize="@dimen/textsize_13sp" />
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/main_margin_0.5x"
+                    android:layout_toRightOf="@id/tv_distance_headline"
+                    android:text="4.5km"
+                    android:textColor="@color/text_color_333333"
+                    android:textSize="@dimen/textsize_13sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/main_padding_1x">
+
+            <TextView
+                android:id="@+id/tv_charger_headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/main_margin_1.5x"
+                android:text="@string/charger_station_detial_charger"
+                android:textColor="@color/text_color_000000"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <TextView
+                android:id="@+id/tv_charger_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:drawablePadding="@dimen/main_padding_0.5x"
+                android:drawableRight="@drawable/mine_icon_right_arrow_gray"
+                android:text="@string/charger_station_detial_look_charger_status"
+                android:textColor="@color/text_color_999999"
+                android:textSize="@dimen/textsize_13sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_fast_charge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_charger_headline"
+                android:layout_toLeftOf="@+id/tv_charger_status">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_fast_headline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/main_margin_1.5x"
+                        android:drawableLeft="@drawable/charger_icon_fast_charge"
+                        android:drawablePadding="@dimen/main_padding_0.5x"
+                        android:gravity="center"
+                        android:text="@string/charger_station_detail_fast_charge"
+                        android:textColor="@color/text_color_333333"
+                        android:textSize="@dimen/textsize_13sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:id="@+id/tv_fast_charge_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_fast_headline"
+                        android:text="15"
+                        android:textColor="@color/text_color_ffa415"
+                        android:textSize="@dimen/textsize_13sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_fast_free_headline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/main_margin_1.5x"
+                        android:gravity="center"
+                        android:text="@string/charger_station_detail_free"
+                        android:textColor="@color/text_color_333333"
+                        android:textSize="@dimen/textsize_13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_fast_charge_free_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_fast_free_headline"
+                        android:text="15"
+                        android:textColor="@color/text_color_ffa415"
+                        android:textSize="@dimen/textsize_13sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_fast_service_headline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/main_margin_1.5x"
+                        android:gravity="center"
+                        android:text="@string/charger_station_detail_service"
+                        android:textColor="@color/text_color_333333"
+                        android:textSize="@dimen/textsize_13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_fast_charge_service_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_fast_service_headline"
+                        android:text="15"
+                        android:textColor="@color/text_color_ffa415"
+                        android:textSize="@dimen/textsize_13sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_fast_charge"
+                android:layout_marginTop="@dimen/main_margin_1x"
+                android:layout_toLeftOf="@+id/tv_charger_status">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_slow_headline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/main_margin_1.5x"
+                        android:drawableLeft="@drawable/charger_icon_slow_charge"
+                        android:drawablePadding="@dimen/main_padding_0.5x"
+                        android:gravity="center"
+                        android:text="@string/charger_station_detail_slow_charge"
+                        android:textColor="@color/text_color_333333"
+                        android:textSize="@dimen/textsize_13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_slow_charge_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_slow_headline"
+                        android:text="15"
+                        android:textColor="@color/text_color_ffa415"
+                        android:textSize="@dimen/textsize_13sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_slow_free_headline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/main_margin_1.5x"
+                        android:gravity="center"
+                        android:text="@string/charger_station_detail_free"
+                        android:textColor="@color/text_color_333333"
+                        android:textSize="@dimen/textsize_13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_slow_charge_free_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_slow_free_headline"
+                        android:text="15"
+                        android:textColor="@color/text_color_ffa415"
+                        android:textSize="@dimen/textsize_13sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_slow_service_headline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/main_margin_1.5x"
+                        android:gravity="center"
+                        android:text="@string/charger_station_detail_service"
+                        android:textColor="@color/text_color_333333"
+                        android:textSize="@dimen/textsize_13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_slow_charge_service_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_slow_service_headline"
+                        android:text="15"
+                        android:textColor="@color/text_color_ffa415"
+                        android:textSize="@dimen/textsize_13sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_1x"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/main_padding_1x">
+
+            <TextView
+                android:id="@+id/tv_charges_method_headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/main_margin_1.5x"
+                android:text="@string/charger_station_detail_charge_mode"
+                android:textColor="@color/text_color_000000"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_charges_method_headline"
+                android:drawableLeft="@drawable/charger_icon_charges_method"
+                android:drawablePadding="@dimen/main_padding_0.5x"
+                android:gravity="center"
+                android:text="2小时内5元"
+                android:textColor="@color/text_color_333333"
+                android:textSize="@dimen/textsize_13sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

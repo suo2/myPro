@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_toolbar"
+        app:tabBackground="@drawable/mine_message_tab_bg"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/text_color_ff9933"
+        app:tabTextAppearance="@style/mine_message_tab_text"
+        app:tabTextColor="@color/text_color_353535"></android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tab_switch"
+        android:layout_marginTop="@dimen/main_margin_1.5x"></android.support.v4.view.ViewPager>
+
+    <include layout="@layout/toolbar_include_shadow" />
+</RelativeLayout>

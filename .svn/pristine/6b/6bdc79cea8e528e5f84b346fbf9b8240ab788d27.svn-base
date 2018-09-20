@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_toolbar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_scan"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <com.journeyapps.barcodescanner.DecoratedBarcodeView
+                android:id="@+id/zxing_barcode_scanner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:zxing_framing_rect_height="340dp"
+                app:zxing_framing_rect_width="340dp"
+                app:zxing_preview_scaling_strategy="centerCrop"
+                app:zxing_scanner_layout="@layout/charger_zxing_custom_barcode_scanner"
+                app:zxing_use_texture_view="true">
+
+            </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+            <LinearLayout
+                android:id="@+id/ll_input_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/main_margin_5x"
+                android:layout_marginRight="@dimen/main_margin_5x"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.pinnet.chargerapp.widget.ClearEditText
+                    android:id="@+id/cet_input_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/charger_route_set_address_search_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="请输入桩和枪口编号"
+                    android:digits="0123456789_"
+                    android:padding="@dimen/main_padding_1x"
+                    android:textColor="@color/text_color_333333"
+                    android:textSize="@dimen/textsize_14sp" />
+
+                <TextView
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/main_margin_2x"
+                    android:background="@drawable/charger_zxing_btn_bg"
+                    android:paddingBottom="@dimen/main_padding_1x"
+                    android:paddingLeft="@dimen/main_padding_4x"
+                    android:paddingRight="@dimen/main_padding_4x"
+                    android:paddingTop="@dimen/main_padding_1x"
+                    android:text="@string/login_reset_password_confirm"
+                    android:textColor="@color/text_color_ffffff" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/main_margin_4x"
+                android:background="@drawable/mine_vip_bg"
+                android:padding="@dimen/main_padding_1x"
+                android:text="对准电桩上的二维码"
+                android:textColor="@color/text_color_ffffff"
+                android:textSize="@dimen/textsize_13sp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_input_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="100dp"
+                android:drawablePadding="@dimen/main_padding_1.5x"
+                android:drawableTop="@drawable/charger_icon_hand_input"
+                android:text="@string/charger_scan_input_charger_number"
+                android:textColor="@color/text_color_ffffff"
+                android:textSize="@dimen/textsize_11sp" />
+
+            <CheckBox
+                android:id="@+id/tv_flashlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawablePadding="@dimen/main_padding_1.5x"
+                android:drawableTop="@drawable/charger_zxing_flashlight_switch"
+                android:text="@string/charger_zxing_open_flashlight"
+                android:textColor="@color/text_color_ffffff"
+                android:textSize="@dimen/textsize_11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/toolbar_include_shadow" />
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_toolbar"
+        android:orientation="vertical"
+        android:padding="@dimen/main_padding_1.5x">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="充电体验"
+                android:textColor="@color/text_color_333333"
+                android:textSize="@dimen/textsize_20sp" />
+
+            <com.pinnet.chargerapp.widget.StarView
+                android:id="@+id/starview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_margin_2x"
+                android:layout_toRightOf="@+id/tv_tip"
+                app:mCanClick="true"
+                app:mClickImageId="@drawable/charger_icon_star_orange"
+                app:mDefaultImageId="@drawable/charger_icon_star_normal"
+                app:mImageHeight="20dp"
+                app:mImageWidth="20dp"></com.pinnet.chargerapp.widget.StarView>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/main_margin_1.5x"
+            android:layout_marginTop="@dimen/main_margin_1.5x"
+            android:background="@color/login_divider" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/main_margin_3x"
+            android:layout_marginTop="@dimen/main_margin_1x"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="有什么想吐槽的吗？来跟其他车友分享下吧..."
+            android:minHeight="150dp"
+            android:textColorHint="@color/text_color_999999"
+            android:textSize="@dimen/textsize_16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/main_padding_1x"
+            android:drawableTop="@drawable/amap_ride"
+            android:padding="@dimen/main_padding_1x"
+            android:text="上传图片"
+            android:textColorHighlight="@color/text_color_666666"
+            android:textSize="@dimen/textsize_14sp" />
+    </LinearLayout>
+
+    <include layout="@layout/toolbar_include_shadow" />
+
+</RelativeLayout>

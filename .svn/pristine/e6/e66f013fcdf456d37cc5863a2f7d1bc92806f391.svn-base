@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <LinearLayout
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_toolbar"
+        android:background="@color/mine_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/main_padding_2x">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付充电金额"
+                android:textColor="@color/text_color_666666"
+                android:textSize="@dimen/textsize_11sp" />
+
+            <TextView
+                android:id="@+id/tv_initiate_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/main_margin_1x"
+                android:layout_marginTop="@dimen/main_margin_2x"
+                android:text="@string/main_invate_value"
+                android:textColor="@color/text_color_333333"
+                android:textSize="@dimen/textsize_18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大源村充电桩 (大源村）-2639474055829520"
+                android:textColor="@color/text_color_666666"
+                android:textSize="@dimen/textsize_9sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_alipay_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_1x"
+            android:background="@color/white"
+            android:padding="@dimen/main_padding_1.5x"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/charger_icon_deposit_alipay"
+                android:drawablePadding="@dimen/main_padding_2.5x"
+                android:text="支付宝支付"
+                android:textColor="@color/text_color_333333"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <CheckBox
+                android:id="@+id/cb_alipay_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/charger_pay_checkbox_bg"
+                android:button="@null"
+                android:checked="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_weixin_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_1x"
+            android:background="@color/white"
+            android:padding="@dimen/main_padding_1.5x">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/charger_icon_deposit_weixin"
+                android:drawablePadding="@dimen/main_padding_2.5x"
+                android:text="微信支付"
+                android:textColor="@color/text_color_333333"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <CheckBox
+                android:id="@+id/cb_weixin_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/charger_pay_checkbox_bg"
+                android:button="@null"
+                android:enabled="false"
+                android:checked="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_5x"
+            android:background="@color/white"
+            android:padding="@dimen/main_padding_1.5x">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实付金额"
+                android:textColor="@color/text_color_666666"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <TextView
+                android:id="@+id/tv_pay_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/main_invate_value"
+                android:textColor="@color/text_color_333333"
+                android:textSize="@dimen/textsize_18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_confirm_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_ff9934"
+        android:gravity="center"
+        android:padding="@dimen/main_padding_2x"
+        android:text="确认付款"
+        android:textColor="@color/text_color_ffffff"
+        android:textSize="@dimen/textsize_18sp" />
+
+    <include layout="@layout/toolbar_include_shadow" />
+</RelativeLayout>

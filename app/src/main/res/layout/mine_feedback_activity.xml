@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <LinearLayout
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_toolbar"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/main_margin_1x"
+            android:background="@drawable/charger_dialog_help_white_bg"
+            android:gravity="top"
+            android:hint="请输入您的宝贵意见，^_^！"
+            android:lineSpacingExtra="@dimen/main_padding_0.5x"
+            android:maxLength="250"
+            android:minHeight="200dp"
+            android:padding="@dimen/main_padding_1x"
+            android:textColor="@color/text_color_333333"
+            android:textSize="@dimen/textsize_16sp" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/main_margin_2x"
+            android:background="@drawable/login_btn_bg"
+            android:text="提交"
+            android:textColor="@color/text_color_ffffff"
+            android:textSize="@dimen/textsize_18sp" />
+    </LinearLayout>
+
+    <include layout="@layout/toolbar_include_shadow" />
+</RelativeLayout>

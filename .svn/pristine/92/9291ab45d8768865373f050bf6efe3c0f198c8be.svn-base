@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/main_margin_2x"
+        android:layout_marginLeft="@dimen/main_margin_1x"
+        android:layout_marginTop="@dimen/main_margin_2x"
+        android:text="运营商"
+        android:textColor="@color/text_color_666666"
+        android:textSize="@dimen/textsize_14sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_screening_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rg_tablayout"></FrameLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/rg_tablayout"
+            android:background="#1a000000" />
+
+
+        <RadioGroup
+            android:id="@+id/rg_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_tablayout_height"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_charger"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/main_home_charger_rb_bg"
+                android:gravity="center"
+                android:paddingTop="@dimen/main_padding_0.5x"
+                android:text="@string/main_tab_terminal"
+                android:textColor="@color/main_tab_textcolor_selector"
+                android:textSize="@dimen/textsize_13sp" />
+
+            <RadioButton
+                android:id="@+id/rb_consult"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/main_tab_consult"
+                android:textColor="@color/main_tab_textcolor_selector"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/rb_scan"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/main_icon_scan"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/main_tab_textcolor_selector"
+                android:textSize="0sp" />
+
+            <RadioButton
+                android:id="@+id/rb_business"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/main_tab_service"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/rb_mine"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/main_home_mine_rb_bg"
+                android:gravity="center"
+                android:paddingTop="@dimen/main_padding_0.5x"
+                android:text="@string/main_tab_mine"
+                android:textColor="@color/main_tab_textcolor_selector"
+                android:textSize="@dimen/textsize_13sp" />
+        </RadioGroup>
+
+        <com.pinnet.chargerapp.widget.RadarView
+            android:id="@+id/radar_view"
+            android:layout_width="80dp"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:rb_duration="3000"
+            app:rb_radius="5dp"
+            app:rb_rippleAmount="3"
+            app:rb_scale="6">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/main_icon_charging" />
+        </com.pinnet.chargerapp.widget.RadarView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_marginTop="@dimen/main_status_height"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/main_padding_0.5x"
+        android:paddingRight="@dimen/main_padding_0.5x">
+
+        <include layout="@layout/charger_home_drawer_fragment" />
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

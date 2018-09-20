@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/main_padding_1.5x"
+        android:weightSum="4">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_station_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/charger_icon_station_default" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/main_margin_1.5x"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_sort_flag"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/main_margin_0.5x"
+                    android:background="@drawable/charger_station_sort_flag_bg"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/text_color_ffffff"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_station_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/main_margin_1x"
+                    android:layout_toRightOf="@+id/tv_sort_flag"
+                    android:text="银泰中心超级充电站"
+                    android:textColor="@color/text_color_000000"
+                    android:textSize="@dimen/textsize_17sp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_opreator_flag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_station_name"
+                    android:background="@drawable/charger_station_opreator_flag_bg"
+                    android:padding="@dimen/main_padding_0.5x"
+                    android:text="自营"
+                    android:textColor="@color/text_color_ff9933"
+                    android:textSize="@dimen/textsize_11sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_station_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/main_margin_1x"
+                android:layout_marginTop="@dimen/main_margin_1x"
+                android:text="四川省成都市天府大道中段230号"
+                android:textColor="@color/text_color_999999"
+                android:textSize="@dimen/textsize_13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_charger_fast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_station_name"
+                    android:background="@drawable/charger_station_opreator_flag_bg"
+                    android:padding="@dimen/main_padding_0.5x"
+                    android:text="快充"
+                    android:textColor="@color/text_color_ff9933"
+                    android:textSize="@dimen/textsize_11sp" />
+
+                <TextView
+                    android:id="@+id/tv_charger_slow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_margin_1x"
+                    android:layout_toRightOf="@+id/tv_station_name"
+                    android:background="@drawable/charger_station_opreator_flag_bg"
+                    android:padding="@dimen/main_padding_0.5x"
+                    android:text="慢充"
+                    android:textColor="@color/text_color_ff9933"
+                    android:textSize="@dimen/textsize_11sp" />
+
+                <TextView
+                    android:id="@+id/tv_charger_total_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_margin_0.5x"
+                    android:layout_toRightOf="@+id/tv_station_name"
+                    android:padding="@dimen/main_padding_0.5x"
+                    android:text="8个充电桩"
+                    android:textColor="@color/text_color_ff9933"
+                    android:textSize="@dimen/textsize_11sp" />
+
+                <TextView
+                    android:id="@+id/tv_charger_free_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_margin_0.5x"
+                    android:layout_toRightOf="@+id/tv_station_name"
+                    android:padding="@dimen/main_padding_0.5x"
+                    android:text="3个空闲"
+                    android:textColor="@color/text_color_ff9933"
+                    android:textSize="@dimen/textsize_11sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.3km"
+                    android:textColor="@color/text_color_666666"
+                    android:textSize="@dimen/textsize_13sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/main_margin_2x"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.pinnet.chargerapp.widget.StarView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    app:mClickImageId="@drawable/charger_icon_star_orange"
+                    app:mDefaultImageId="@drawable/charger_icon_star_normal"
+                    app:mImageHeight="15dp"
+                    app:mImageWidth="15dp" />
+
+                <ImageView
+                    android:id="@+id/iv_navigation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/charger_icon_navigation" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/login_divider" />
+
+</LinearLayout>

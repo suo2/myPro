@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <RelativeLayout
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_toolbar"
+        android:layout_marginTop="@dimen/main_margin_2.5x"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/main_padding_1x"
+        android:paddingRight="@dimen/main_padding_1x">
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/mine_persionalinfo_input_alter_content"
+            android:paddingBottom="@dimen/main_padding_1x"
+            android:paddingTop="@dimen/main_padding_1x"
+            android:textColor="@color/text_color_333333"
+            android:textSize="@dimen/textsize_16sp" />
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/login_icon_close"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <include layout="@layout/toolbar_include_shadow" />
+
+</RelativeLayout>

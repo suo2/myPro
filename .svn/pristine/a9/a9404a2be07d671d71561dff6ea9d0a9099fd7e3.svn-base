@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/view_main"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_toolbar_shadow_height"
+        android:layout_below="@+id/main_toolbar"
+        android:background="@drawable/main_titlebar_shadow" />
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/main_padding_2x">
+
+    <TextView
+        android:id="@+id/tv_charge_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="大源充电桩"
+        android:textColor="@color/text_color_333333"
+        android:textSize="@dimen/textsize_17sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_charge_name"
+        android:layout_marginTop="@dimen/main_margin_2x"
+        android:text="2017-01-01 12:12:12"
+        android:textColor="@color/text_color_333333"
+        android:textSize="@dimen/textsize_17sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/main_margin_1.5x"
+        android:layout_toLeftOf="@+id/iv_turn"
+        android:text="立即查看"
+        android:textColor="@color/text_color_ffa415"
+        android:textSize="@dimen/textsize_12sp" />
+
+    <ImageView
+        android:id="@+id/iv_turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/mine_icon_right_arrow_orange" />
+</RelativeLayout>

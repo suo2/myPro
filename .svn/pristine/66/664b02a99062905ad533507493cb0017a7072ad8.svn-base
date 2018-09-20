@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_splash_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/iv_name"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:src="@drawable/main_splash_logo" />
+
+    <ImageView
+        android:id="@+id/iv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/main_margin_1x"
+        android:layout_marginTop="@dimen/main_margin_4x"
+        android:alpha="0"
+        android:src="@drawable/main_splash_name" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_name"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:text="更准更全  |  找桩神器"
+        android:textColor="@color/text_color_ffffff"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/iv_anim_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:src="@mipmap/app_icon" />
+</RelativeLayout>

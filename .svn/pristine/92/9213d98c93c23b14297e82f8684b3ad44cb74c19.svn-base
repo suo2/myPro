@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_toolbar_height"
+        android:background="@color/main_color"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/main_status_height">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/main_margin_1.5x"
+            android:padding="@dimen/main_padding_1x"
+            android:src="@drawable/charger_back_arrow"
+            android:visibility="visible" />
+
+        <com.pinnet.chargerapp.widget.ClearEditText
+            android:id="@+id/cet_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/main_margin_1x"
+            android:layout_marginRight="@dimen/main_margin_4x"
+            android:layout_toRightOf="@+id/iv_back"
+            android:background="@drawable/charger_route_set_address_search_bg"
+            android:hint="请输入您想要去的地方"
+            android:padding="@dimen/main_padding_0.5x"
+            android:textColor="@color/text_color_666666"
+            android:textSize="@dimen/textsize_14sp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_toolbar"
+        android:layout_marginTop="@dimen/main_margin_0.5x"></android.support.v7.widget.RecyclerView>
+
+    <include layout="@layout/toolbar_include_shadow" />
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="标识说明"
+        android:textColor="@color/text_color_ffffff"
+        android:textSize="@dimen/textsize_32sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin_4x">
+
+        <ImageView
+            android:id="@+id/iv_yellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/main_margin_1x"
+            android:src="@drawable/charger_logo_explain_orange" />
+
+        <TextView
+            android:id="@+id/tv_yellow_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_yellow"
+            android:text="橙色:"
+            android:textColor="@color/text_color_ffa415"
+            android:textSize="@dimen/textsize_20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_yellow_title"
+            android:layout_marginTop="@dimen/main_margin_1x"
+            android:layout_toRightOf="@+id/iv_yellow"
+            android:text="并网电站"
+            android:textColor="@color/text_color_ffffff"
+            android:textSize="@dimen/textsize_16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin_4x">
+
+        <ImageView
+            android:id="@+id/iv_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/main_margin_1x"
+            android:src="@drawable/charger_logo_explain_green" />
+
+        <TextView
+            android:id="@+id/tv_green_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_green"
+            android:text="绿色:"
+            android:textColor="@color/text_color_44daaa"
+            android:textSize="@dimen/textsize_20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_green_title"
+            android:layout_marginTop="@dimen/main_margin_0.5x"
+            android:layout_toRightOf="@+id/iv_green"
+            android:text="在建电站"
+            android:textColor="@color/text_color_ffffff"
+            android:textSize="@dimen/textsize_16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin_4x">
+
+        <ImageView
+            android:id="@+id/iv_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/main_margin_1x"
+            android:src="@drawable/charger_logo_explain_gray" />
+
+        <TextView
+            android:id="@+id/tv_gray_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_gray"
+            android:text="灰色:"
+            android:textColor="@color/text_color_cccccc"
+            android:textSize="@dimen/textsize_20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_gray_title"
+            android:layout_marginTop="@dimen/main_margin_0.5x"
+            android:layout_toRightOf="@+id/iv_gray"
+            android:text="未建电站"
+            android:textColor="@color/text_color_ffffff"
+            android:textSize="@dimen/textsize_16sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin_5x"
+        android:src="@drawable/charge_icon_logo_explain_close" />
+</LinearLayout>

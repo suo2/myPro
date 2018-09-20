@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="TranslucentTheme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowContentTransitions">true</item>
+
+        <item name="android:windowAnimationStyle">@style/animfade</item>
+        <!--是否覆盖执行，其实可以理解成是否同步执行还是顺序执行-->
+        <!--<item name="android:windowAllowEnterTransitionOverlap">false</item>-->
+        <!--<item name="android:windowAllowReturnTransitionOverlap">false</item>-->
+        <!--<item name="android:windowEnterTransition">@transition/slide</item>-->
+        <!--<item name="android:windowExitTransition">@transition/explode</item>-->
+    </style>
+</resources>

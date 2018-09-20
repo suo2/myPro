@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <LinearLayout
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_toolbar"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/main_margin_2x"
+            android:src="@drawable/charger_icon_zxing_logo" />
+
+        <com.pinnet.chargerapp.widget.NumberInputView
+            android:id="@+id/number_input_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/main_margin_2x"
+            android:paddingBottom="@dimen/main_padding_0.5x"></com.pinnet.chargerapp.widget.NumberInputView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/main_margin_4x"
+        android:background="@drawable/charger_charging_btn_orange_bg"
+        android:text="确定"
+        android:textColor="@color/text_color_ffffff"
+        android:textSize="@dimen/textsize_16sp"
+        android:visibility="gone" />
+
+    <include layout="@layout/toolbar_include_shadow" />
+</RelativeLayout>

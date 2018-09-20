@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_bg">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <LinearLayout
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_toolbar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/main_padding_2x"
+            android:paddingLeft="@dimen/main_padding_3x"
+            android:paddingRight="@dimen/main_padding_2x"
+            android:paddingTop="@dimen/main_padding_2x"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mine_contact_us_weixin_group"
+                android:textColor="@color/text_color_333333"
+                android:textSize="@dimen/textsize_17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="454612345" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginRight="@dimen/main_margin_1x"
+            android:background="@color/mine_bg" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/main_padding_2x"
+            android:paddingLeft="@dimen/main_padding_3x"
+            android:paddingRight="@dimen/main_padding_2x"
+            android:paddingTop="@dimen/main_padding_2x">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:text="@string/min_contact_us_email" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="lu.yang@pinnettech.com" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginRight="@dimen/main_margin_1x"
+            android:background="@color/mine_bg" />
+
+        <RelativeLayout
+            android:id="@+id/rl_call_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/main_padding_2x"
+            android:paddingLeft="@dimen/main_padding_3x"
+            android:paddingRight="@dimen/main_padding_2x"
+            android:paddingTop="@dimen/main_padding_2x">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:text="@string/mint_contact_us_service_telephone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="86-0571-28332811" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/toolbar_include_shadow" />
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:padding="@dimen/main_padding_1x">
+
+    <TextView
+        android:id="@+id/tv_start_point_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_start_point"
+        android:text="起点："
+
+        android:textColor="@color/text_color_666666"
+        android:textSize="@dimen/textsize_14sp" />
+
+    <TextView
+        android:id="@+id/tv_start_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_start_point_title"
+        android:text="成都长虹"
+        android:textColor="@color/text_color_666666"
+        android:textSize="@dimen/textsize_16sp" />
+
+    <TextView
+        android:id="@+id/tv_end_point_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_end_point"
+        android:layout_marginTop="@dimen/main_margin_0.5x"
+        android:text="终点："
+        android:textColor="@color/text_color_666666"
+        android:textSize="@dimen/textsize_14sp" />
+
+    <TextView
+        android:id="@+id/tv_end_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_start_point"
+        android:layout_marginTop="@dimen/main_margin_0.5x"
+
+        android:layout_toRightOf="@+id/tv_end_point_title"
+        android:text="成都双流东湖游园"
+        android:textColor="@color/text_color_666666"
+        android:textSize="@dimen/textsize_16sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/charger_icon_navigation" />
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_pay_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_dialog_bg"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/main_padding_2.5x">
+
+        <ImageView
+            android:id="@+id/iv_pay_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/charger_icon_pay_success" />
+
+        <TextView
+            android:id="@+id/tv_pay_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_1.5x"
+            android:text="@string/charger_pay_tips_success"
+            android:textColor="@color/text_color_666666"
+            android:textSize="@dimen/textsize_16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/main_margin_1.5x"
+            android:layout_marginTop="@dimen/main_margin_1.5x"
+            android:background="@color/login_divider" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/main_padding_0.5x"
+            android:text="知道了"
+            android:textColor="@color/text_color_ff9933"
+            android:textSize="@dimen/textsize_20sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <LinearLayout
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_toolbar"
+        android:background="@color/mine_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/main_padding_2x">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:text="@string/mine_setting_help_explain" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/main_margin_2x"
+            android:background="@color/mine_bg" />
+
+        <RelativeLayout
+            android:id="@+id/rl_aboute_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/main_padding_2x">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:text="@string/mine_setting_about_us" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/main_margin_2x"
+            android:background="@color/mine_bg" />
+
+        <RelativeLayout
+            android:id="@+id/rl_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/main_padding_2x">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:text="@string/mine_setting_feedback" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_padding_2x"
+            android:background="@color/white"
+            android:padding="@dimen/main_padding_2x">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:text="@string/mine_setting_current_version" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/main_margin_1.5x"
+                android:layout_toLeftOf="@+id/iv_version_turn"
+                android:text="1.11"
+                android:textColor="@color/text_color_999999"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <ImageView
+                android:id="@+id/iv_version_turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/main_margin_2x"
+            android:background="@color/mine_bg" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/main_padding_2x">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:text="@string/mine_setting_clear_cache" />
+
+            <TextView
+                android:id="@+id/tv_cache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/main_margin_1.5x"
+                android:layout_toLeftOf="@+id/iv_cache_turn"
+                android:text="4.4M"
+                android:textColor="@color/text_color_999999"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <ImageView
+                android:id="@+id/iv_cache_turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_login_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/main_margin_2x"
+            android:background="@drawable/login_btn_bg"
+            android:text="退出登录"
+            android:textColor="@color/text_color_ffffff"
+            android:textSize="@dimen/textsize_16sp" />
+    </LinearLayout>
+
+    <include layout="@layout/toolbar_include_shadow" />
+</RelativeLayout>

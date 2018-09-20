@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_submit_comment"></android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_submit_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/text_color_ff9933"
+        android:gravity="center"
+        android:padding="@dimen/main_padding_1.5x"
+        android:text="发表评论"
+        android:textColor="@color/text_color_ffffff"
+        android:textSize="@dimen/textsize_16sp" />
+</RelativeLayout>

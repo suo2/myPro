@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/login_logo" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/main_margin_2x"
+                android:src="@drawable/login_logo_name" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/main_toolbar"
+            android:layout_marginLeft="@dimen/main_margin_5x"
+            android:layout_marginRight="@dimen/main_margin_5x"
+            android:orientation="vertical">
+
+            <TextView
+                android:background="@drawable/charger_btn_ripple_orangey"
+                android:id="@+id/tv_switch_login_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="@dimen/main_margin_1x"
+                android:text="免密登录"
+                android:textColor="@color/text_color_ff9933"
+                android:textSize="@dimen/textsize_16sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--反面-->
+                <LinearLayout
+                    android:id="@+id/ll_card_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0"
+                    android:orientation="vertical">
+
+                    <com.pinnet.chargerapp.widget.LoginEditText
+                        android:id="@+id/let_username_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/login_register_input_height"
+                        android:layout_marginLeft="@dimen/main_margin_0.5x"
+                        android:layout_marginRight="@dimen/main_margin_0.5x"
+                        android:layout_marginTop="@dimen/main_margin_0.5x"
+                        android:background="@drawable/login_input_bg"
+                        android:elevation="5dp"
+                        android:paddingLeft="@dimen/main_padding_1x"
+                        android:paddingRight="@dimen/main_padding_1x"
+                        app:focusIcon="@drawable/login_icon_account_focus"
+                        app:hideText="@string/login_input_username_hint"
+                        app:normalIcon="@drawable/login_icon_account_nomal" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/login_register_input_height"
+                        android:layout_marginBottom="@dimen/main_margin_1x"
+                        android:layout_marginLeft="@dimen/main_margin_0.5x"
+                        android:layout_marginRight="@dimen/main_margin_0.5x"
+                        android:layout_marginTop="@dimen/main_margin_2x"
+                        android:background="@drawable/login_input_bg"
+                        android:elevation="5dp"
+                        android:paddingLeft="@dimen/main_padding_1x"
+                        android:paddingRight="@dimen/main_padding_1x">
+
+                        <com.pinnet.chargerapp.widget.LoginEditText
+                            android:id="@+id/let_identify_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignTop="@+id/tv_send_identifying_code"
+                            android:layout_marginRight="@dimen/main_margin_1x"
+                            android:layout_toLeftOf="@+id/tv_send_identifying_code"
+                            app:focusIcon="@drawable/login_icon_identifying_code_focus"
+                            app:hideText="@string/login_input_identifying_code_hint"
+                            app:normalIcon="@drawable/login_icon_identifying_code"></com.pinnet.chargerapp.widget.LoginEditText>
+
+                        <TextView
+                            android:id="@+id/tv_send_identifying_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingBottom="@dimen/main_padding_1x"
+                            android:paddingTop="@dimen/main_padding_1x"
+                            android:text="@string/login_send_identifying_code"
+                            android:textColor="@color/text_color_ff9933"
+                            android:textSize="@dimen/textsize_14sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <!--正面-->
+                <LinearLayout
+
+                    android:id="@+id/ll_card_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.pinnet.chargerapp.widget.LoginEditText
+                        android:id="@+id/let_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/login_register_input_height"
+                        android:layout_marginLeft="@dimen/main_margin_0.5x"
+                        android:layout_marginRight="@dimen/main_margin_0.5x"
+                        android:layout_marginTop="@dimen/main_margin_0.5x"
+                        android:background="@drawable/login_input_bg"
+                        android:elevation="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/main_padding_1x"
+                        android:paddingRight="@dimen/main_padding_1x"
+                        app:focusIcon="@drawable/login_icon_account_focus"
+                        app:hideText="@string/login_input_username_hint"
+                        app:normalIcon="@drawable/login_icon_account_nomal"></com.pinnet.chargerapp.widget.LoginEditText>
+
+                    <com.pinnet.chargerapp.widget.LoginEditText
+                        android:id="@+id/let_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/login_register_input_height"
+                        android:layout_marginBottom="@dimen/main_margin_1x"
+                        android:layout_marginLeft="@dimen/main_margin_0.5x"
+                        android:layout_marginRight="@dimen/main_margin_0.5x"
+                        android:layout_marginTop="@dimen/main_margin_2x"
+                        android:background="@drawable/login_input_bg"
+                        android:elevation="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/main_padding_1x"
+                        android:paddingRight="@dimen/main_padding_1x"
+                        app:focusIcon="@drawable/login_icon_passowrd_focus"
+                        app:hideText="@string/login_input_password_hint"
+                        app:normalIcon="@drawable/login_icon_password_normal"
+                        app:rightIconEnabled="true"
+                        app:showTextEnabled="false"></com.pinnet.chargerapp.widget.LoginEditText>
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="@dimen/main_margin_4x"
+                android:background="@drawable/charger_btn_ripple_login"
+                android:text="@string/login_btn"
+                android:textColor="@color/login_btn_text"
+                android:textSize="@dimen/textsize_18sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/main_margin_5x">
+
+                <TextView
+                    android:background="@drawable/charger_btn_ripple_orangey"
+                    android:id="@+id/tv_register_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/login_register_user"
+                    android:textColor="@color/text_color_ff9933"
+                    android:textSize="@dimen/textsize_14sp" />
+
+                <TextView
+                    android:background="@drawable/charger_btn_ripple_orangey"
+                    android:id="@+id/tv_forget_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/login_find_password"
+                    android:textColor="@color/text_color_ff9933"
+                    android:textSize="@dimen/textsize_14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/tv_option_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/charger_method_option_item_unselect_bg"
+        android:gravity="center"
+        android:paddingBottom="@dimen/main_padding_1x"
+        android:paddingTop="@dimen/main_padding_1x"
+        android:focusable="false"
+        android:inputType="number"
+        android:clickable="true"
+        android:text="100元"
+        android:textColor="@color/text_color_ff9933"
+        android:textSize="@dimen/textsize_12sp" />
+
+
+</RelativeLayout>

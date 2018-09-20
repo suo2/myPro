@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <LinearLayout
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/main_toolbar"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/main_padding_4x"
+        android:paddingLeft="@dimen/main_padding_2.5x"
+        android:paddingRight="@dimen/main_padding_2.5x"
+        android:paddingTop="@dimen/main_padding_5x"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.pinnet.chargerapp.widget.ChargerMethodView
+                android:id="@+id/cmv_auto_fill"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:basicIcon="@drawable/charger_icon_auto_fill_red"
+                app:basicTextColor="@color/color_ff4d30"
+                app:mainSelectBackgroud="@drawable/charger_widget_charge_method_red_bg"
+                app:select="true"
+                app:selectIcon="@drawable/charger_icon_auto_fill_white"
+                app:text="自动充满"></com.pinnet.chargerapp.widget.ChargerMethodView>
+
+            <com.pinnet.chargerapp.widget.ChargerMethodView
+                android:id="@+id/cmv_money"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/main_margin_1.5x"
+                android:layout_weight="1"
+                app:basicIcon="@drawable/charger_icon_money_orange"
+                app:basicTextColor="@color/color_ff9934"
+                app:mainSelectBackgroud="@drawable/charger_widget_charge_method_orange_bg"
+                app:selectIcon="@drawable/charger_icon_money_white"
+                app:text="金额模式"></com.pinnet.chargerapp.widget.ChargerMethodView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.pinnet.chargerapp.widget.ChargerMethodView
+                android:id="@+id/cmv_battery"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/main_margin_2x"
+                android:layout_weight="1"
+                app:basicIcon="@drawable/charger_icon_battery_green"
+                app:basicTextColor="@color/color_44daaa"
+                app:mainSelectBackgroud="@drawable/charger_widget_charge_method_green_bg"
+                app:selectIcon="@drawable/charger_icon_battery_white"
+                app:text="电量模式"></com.pinnet.chargerapp.widget.ChargerMethodView>
+
+            <com.pinnet.chargerapp.widget.ChargerMethodView
+                android:id="@+id/cmv_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/main_margin_1.5x"
+                android:layout_marginTop="@dimen/main_margin_2x"
+                android:layout_weight="1"
+                app:basicIcon="@drawable/charger_icon_time_blue"
+                app:basicTextColor="@color/color_74bcf2"
+                app:mainSelectBackgroud="@drawable/charger_widget_charge_method_blue_bg"
+                app:selectIcon="@drawable/charger_icon_time_white"
+                app:text="时间模式"></com.pinnet.chargerapp.widget.ChargerMethodView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/main_padding_2x">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btn_charge"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/main_margin_2x"
+                android:text="请确定充电枪已正确连接"
+                android:textColor="@color/text_color_999999"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <Button
+                android:id="@+id/btn_charge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/charger_method_black_bg"
+                android:text="开始充电"
+                android:textColor="@color/text_color_ffffff"
+                android:textSize="@dimen/textsize_18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/toolbar_include_shadow" />
+</RelativeLayout>

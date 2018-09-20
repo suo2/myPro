@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_bg">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <LinearLayout
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_toolbar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/main_padding_2x"
+            android:paddingLeft="@dimen/main_padding_1.5x"
+            android:paddingRight="@dimen/main_padding_2x"
+            android:paddingTop="@dimen/main_padding_2x">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/mine_icon_balance"
+                android:drawablePadding="@dimen/main_padding_2.5x"
+                android:text="我的余额"
+                android:textColor="@color/text_color_333333"
+                android:textSize="@dimen/textsize_17sp" />
+
+            <TextView
+                android:id="@+id/tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/main_margin_1.5x"
+                android:layout_toLeftOf="@+id/iv_balance_turn"
+                android:text="￥44.44"
+                android:textColor="@color/text_color_999999"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <ImageView
+                android:id="@+id/iv_balance_turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/main_padding_2x"
+            android:paddingLeft="@dimen/main_padding_1.5x"
+            android:paddingRight="@dimen/main_padding_2x"
+            android:paddingTop="@dimen/main_padding_2x">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/mine_icon_income"
+                android:drawablePadding="@dimen/main_padding_2.5x"
+                android:text="我的收入"
+                android:textColor="@color/text_color_333333"
+                android:textSize="@dimen/textsize_17sp" />
+
+            <TextView
+                android:id="@+id/tv_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/main_margin_1.5x"
+                android:layout_toLeftOf="@+id/iv_income_turn"
+                android:text="￥44.44"
+                android:textColor="@color/text_color_999999"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <ImageView
+                android:id="@+id/iv_income_turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_1.5x"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/main_padding_2x"
+            android:paddingLeft="@dimen/main_padding_1.5x"
+            android:paddingRight="@dimen/main_padding_2x"
+            android:paddingTop="@dimen/main_padding_2x">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/mine_icon_integrate"
+                android:drawablePadding="@dimen/main_padding_2.5x"
+                android:text="我的积分"
+                android:textColor="@color/text_color_333333"
+                android:textSize="@dimen/textsize_17sp" />
+
+            <TextView
+                android:id="@+id/tv_integrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/main_margin_1.5x"
+                android:layout_toLeftOf="@+id/iv_integrate_turn"
+                android:text="100"
+                android:textColor="@color/text_color_999999"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <ImageView
+                android:id="@+id/iv_integrate_turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/main_padding_2x"
+            android:paddingLeft="@dimen/main_padding_1.5x"
+            android:paddingRight="@dimen/main_padding_2x"
+            android:paddingTop="@dimen/main_padding_2x">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/mine_icon_coupon"
+                android:drawablePadding="@dimen/main_padding_2.5x"
+                android:text="我的优惠券"
+                android:textColor="@color/text_color_333333"
+                android:textSize="@dimen/textsize_17sp" />
+
+            <TextView
+                android:id="@+id/tv_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/main_margin_1.5x"
+                android:layout_toLeftOf="@+id/iv_coupon_turn"
+                android:text="1张"
+                android:textColor="@color/text_color_999999"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <ImageView
+                android:id="@+id/iv_coupon_turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/main_padding_2x"
+            android:paddingLeft="@dimen/main_padding_1.5x"
+            android:paddingRight="@dimen/main_padding_2x"
+            android:paddingTop="@dimen/main_padding_2x">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/mine_icon_charge_coin"
+                android:drawablePadding="@dimen/main_padding_2.5x"
+                android:text="我的充电币"
+                android:textColor="@color/text_color_333333"
+                android:textSize="@dimen/textsize_17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/main_margin_1.5x"
+                android:layout_toLeftOf="@+id/iv_charge_coin_turn"
+                android:text="￥0.00"
+                android:textColor="@color/text_color_999999"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <ImageView
+                android:id="@+id/iv_charge_coin_turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_non_secret_payment"
+            android:layout_marginTop="@dimen/main_margin_1.5x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/main_padding_2x"
+            android:paddingLeft="@dimen/main_padding_1.5x"
+            android:paddingRight="@dimen/main_padding_2x"
+            android:paddingTop="@dimen/main_padding_2x">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/mine_icon_non_secret_payment"
+                android:drawablePadding="@dimen/main_padding_2.5x"
+                android:text="免密支付"
+                android:textColor="@color/text_color_333333"
+                android:textSize="@dimen/textsize_17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/main_margin_1.5x"
+                android:layout_toLeftOf="@+id/iv_non_secret_payment_turn"
+                android:text="立即开通"
+                android:textColor="@color/text_color_ff9933"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <ImageView
+                android:id="@+id/iv_non_secret_payment_turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/toolbar_include_shadow" />
+
+</RelativeLayout>

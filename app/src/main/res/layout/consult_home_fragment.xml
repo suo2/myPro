@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_toolbar_shadow_height"
+        android:layout_below="@+id/main_toolbar"
+        android:background="@drawable/main_titlebar_shadow" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_toolbar"
+        android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_ask_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:backgroundTint="@color/color_ff9934"
+        android:layout_marginBottom="@dimen/main_margin_2x"
+        android:layout_marginRight="@dimen/main_margin_2x" />
+</RelativeLayout>

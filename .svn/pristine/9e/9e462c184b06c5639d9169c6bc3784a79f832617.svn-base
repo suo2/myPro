@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/ll_empty"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/default_page_empty" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/main_margin_1x"
+        android:layout_marginTop="@dimen/main_margin_1x"
+        android:text="亲，暂无相关数据哦～"
+        android:textColor="@color/text_color_666666"
+        android:textSize="@dimen/textsize_14sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/main_margin_1x"
+        android:layout_marginTop="@dimen/main_margin_0.5x"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请点击"
+            android:textColor="@color/text_color_666666"
+            android:textSize="@dimen/textsize_14sp" />
+
+        <TextView
+            android:id="@+id/tv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/main_margin_0.5x"
+            android:layout_marginRight="@dimen/main_margin_0.5x"
+            android:autoLink="all"
+            android:text="刷新"
+            android:textColor="@color/text_color_ffa415"
+            android:textSize="@dimen/textsize_14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重试"
+            android:textColor="@color/text_color_666666"
+            android:textSize="@dimen/textsize_14sp" />
+    </LinearLayout>
+</LinearLayout>

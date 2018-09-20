@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_bg"
+    android:backgroundTint="@color/mine_bg"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/main_padding_0.5x"
+    android:weightSum="3">
+
+    <LinearLayout
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/main_margin_0.5x"
+            android:layout_marginTop="@dimen/main_margin_0.5x"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rlv_charger_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layoutAnimation="@anim/layout_animation_fall_down">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/ll_charger_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/default_page_empty" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="暂无相关数据～"
+                    android:textColor="@color/text_color_666666"
+                    android:textSize="@dimen/textsize_14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/main_margin_1x"
+            android:layout_weight="2">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_charger_describe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电桩123456有5个枪口，3个空闲中"
+                android:textColor="@color/text_color_999999"
+                android:textSize="@dimen/textsize_11sp" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rlv_charger_muzzle_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/tv_charger_describe"
+                android:layout_marginTop="@dimen/main_margin_0.5x"
+                android:layoutAnimation="@anim/layout_animation_fall_down"></android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/ll_muzzle_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/default_page_empty" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="暂无相关数据～"
+                    android:textColor="@color/text_color_666666"
+                    android:textSize="@dimen/textsize_14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

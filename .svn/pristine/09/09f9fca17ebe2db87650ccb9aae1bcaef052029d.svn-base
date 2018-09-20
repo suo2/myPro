@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/view_main"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/main_color"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/main_padding_2x"
+        android:paddingRight="@dimen/main_padding_2x"
+        android:paddingTop="@dimen/main_status_height">
+
+        <RelativeLayout
+            android:id="@+id/rl_user_personal_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.pinnet.chargerapp.widget.CircleImageView
+                android:id="@+id/iv_user_header"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_defaule_header"
+                app:border_width="0dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/main_margin_1.5x"
+                android:layout_toRightOf="@+id/iv_user_header">
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="满城花葬爱"
+                    android:textColor="@color/text_color_ffffff"
+                    android:textSize="@dimen/textsize_14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_user_name"
+                    android:drawablePadding="@dimen/main_padding_0.5x"
+                    android:layout_marginTop="@dimen/main_margin_1.5x"
+                    android:background="@drawable/mine_vip_bg"
+                    android:drawableLeft="@drawable/mine_icon_vip_logo"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/main_padding_0.5x"
+                    android:text="e品充会员"
+                    android:textColor="@color/text_color_ffffff"
+                    android:textSize="@dimen/textsize_11sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_white" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/toolbar_include_shadow" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_toolbar"
+        android:background="@color/mine_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_my_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/main_padding_2x">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/mine_icon_wallte"
+                android:text="@string/mine_my_wallet" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+        <include layout="@layout/mine_include_divider" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_my_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/main_margin_1x"
+            android:background="@color/white"
+            android:padding="@dimen/main_padding_2x">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/mine_icon_message"
+                android:text="@string/mine_my_message" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_charging_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/main_margin_1x"
+            android:background="@color/white"
+            android:padding="@dimen/main_padding_2x">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/mine_icon_charge_record"
+                android:text="@string/mine_charging_record" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/main_padding_1x"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/account_focus"
+                android:text="@string/mine_my_car_state" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/main_padding_1x"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/account_focus"
+                android:text="@string/mine_my_collect" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/main_margin_2x"
+            android:padding="@dimen/main_padding_1x"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/account_focus"
+                android:text="@string/mine_invite_friend" />
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/main_margin_0.5x"
+                android:layout_toLeftOf="@+id/iv_right_turn"
+                android:text="@string/mine_invite_friend_tips"
+                android:textColor="@color/main_color" />
+
+            <ImageView
+                android:id="@+id/iv_right_turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_contact_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/main_padding_2x">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/mine_icon_contact_us"
+                android:text="@string/mine_contact_us" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+        <include layout="@layout/mine_include_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rl_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/main_padding_2x">
+
+            <TextView
+                style="@style/mine_home_textview"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/mine_icon_setting"
+                android:text="@string/mine_setting" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mine_icon_right_arrow_gray" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

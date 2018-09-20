@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/mine_bg"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <LinearLayout
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_toolbar"
+        android:orientation="vertical">
+
+        <com.pinnet.chargerapp.widget.LimitEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/main_padding_1.5x"
+            android:background="@color/white"
+            android:minHeight="150dp"
+            app:hint="请写下您的问题并用问号结尾（4到50个字）"
+            app:maxWordsNum="50"></com.pinnet.chargerapp.widget.LimitEditText>
+
+        <com.pinnet.chargerapp.widget.LimitEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_2x"
+            android:background="@color/white"
+            android:minHeight="150dp"
+            android:padding="@dimen/main_padding_1.5x"
+            app:hint="请填写问题相关描述信息（选填）"
+            app:maxWordsNum="50"></com.pinnet.chargerapp.widget.LimitEditText>
+    </LinearLayout>
+
+    <include layout="@layout/toolbar_include_shadow" />
+</RelativeLayout>

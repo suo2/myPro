@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners
+        android:bottomLeftRadius="@dimen/charger_help_bg_radius"
+        android:bottomRightRadius="@dimen/charger_help_bg_radius" />
+    <solid android:color="#ffcc66" />
+</shape>

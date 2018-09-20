@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.pinnet.chargerapp.widget.WaveLoadingView
+        android:id="@+id/wave_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:wlv_progressValue="0"
+        app:wlv_shapeType="square"
+        app:wlv_titleCenterColor="@color/text_color_ffffff"
+        app:wlv_titleCenterSize="@dimen/textsize_25sp"
+        app:wlv_waveAmplitude="30"
+        app:wlv_waveColor="@color/color_ff9934"
+        app:wlv_waveColor_gradient="@color/color_ffcc66"
+        app:wlv_wave_background_Color="@color/color_334046" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_7x"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/main_margin_4x"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/charger_charging_voltage_"
+                        android:textColor="@color/text_color_cccccc"
+                        android:textSize="@dimen/textsize_14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_voltage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/main_margin_0.5x"
+                        android:text="@string/main_invate_value"
+                        android:textColor="@color/text_color_cccccc"
+                        android:textSize="@dimen/textsize_30sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/main_margin_3x"
+                        android:text="@string/charger_charging_power_"
+                        android:textColor="@color/text_color_cccccc"
+                        android:textSize="@dimen/textsize_14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_electric_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/main_margin_0.5x"
+                        android:text="@string/main_invate_value"
+                        android:textColor="@color/text_color_cccccc"
+                        android:textSize="@dimen/textsize_30sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_margin_4x"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/charger_changing_current_"
+                        android:textColor="@color/text_color_cccccc"
+                        android:textSize="@dimen/textsize_14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/main_margin_0.5x"
+                        android:text="@string/main_invate_value"
+                        android:textColor="@color/text_color_cccccc"
+                        android:textSize="@dimen/textsize_30sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/main_margin_3x"
+                        android:text="@string/charger_charging_amount_"
+                        android:textColor="@color/text_color_cccccc"
+                        android:textSize="@dimen/textsize_14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/main_margin_0.5x"
+                        android:text="@string/main_invate_value"
+                        android:textColor="@color/text_color_cccccc"
+                        android:textSize="@dimen/textsize_30sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_stop_charge"
+            android:layout_marginBottom="@dimen/main_margin_7x"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/charger_charging_chage_time"
+                android:textColor="@color/text_color_ffffff"
+                android:textSize="@dimen/textsize_18sp" />
+
+            <TextView
+                android:id="@+id/tv_total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/main_margin_1x"
+                android:text="@string/main_invate_value"
+                android:textColor="@color/text_color_ffffff"
+                android:textSize="@dimen/textsize_24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/main_margin_2.5x"
+                android:text="剩余时间"
+                android:textColor="@color/text_color_ffffff"
+                android:textSize="@dimen/textsize_18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_countdown_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/main_margin_1x"
+                android:text="20:18:24"
+                android:textColor="@color/text_color_ffffff"
+                android:textSize="@dimen/textsize_24sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_stop_charge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/main_margin_4x"
+            android:layout_marginLeft="@dimen/main_margin_2.5x"
+            android:layout_marginRight="@dimen/main_margin_2.5x"
+            android:background="@drawable/charger_stop_charge_btn_bg"
+            android:text="@string/charger_charging_stop"
+            android:textColor="@color/text_color_ffffff"
+            android:textSize="@dimen/textsize_18sp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_reply_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="客服小妹"
+            android:textColor="@color/text_color_999999"
+            android:textSize="@dimen/textsize_15sp" />
+
+        <TextView
+            android:id="@+id/tv_reply_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2018-01-02"
+            android:textColor="@color/text_color_999999"
+            android:textSize="@dimen/textsize_15sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin_1x"
+        android:lineSpacingExtra="@dimen/main_padding_0.5x"
+        android:text="感谢您的支持和反馈"
+        android:textColor="@color/text_color_333333"
+        android:textSize="@dimen/textsize_16sp" />
+</LinearLayout>

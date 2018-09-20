@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/toolbar_include_common" />
+
+    <LinearLayout
+        android:id="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_toolbar"
+        android:background="@color/mine_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_start_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/main_padding_2x">
+
+                <ImageView
+                    android:id="@+id/iv_orange_point"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/charger_route_plan_orange_point" />
+
+                <TextView
+                    android:id="@+id/tv_start_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_margin_1x"
+                    android:layout_toRightOf="@+id/iv_orange_point"
+                    android:text="@string/charger_route_plan_my_point" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/main_margin_2x"
+                android:background="@color/mine_bg" />
+
+            <RelativeLayout
+                android:id="@+id/rl_end_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/main_padding_2x">
+
+                <ImageView
+                    android:id="@+id/iv_green_point"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/charger_route_plan_green_point" />
+
+                <TextView
+                    android:id="@+id/et_input_end_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_margin_1x"
+                    android:layout_toRightOf="@+id/iv_green_point"
+                    android:hint="@string/charger_route_plan_input_finish_point" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin_2x"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_margin_1x"
+                android:layout_toRightOf="@+id/iv_orange_point"
+                android:padding="@dimen/main_padding_2x"
+                android:text="@string/charger_route_plan_common_address" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/main_margin_2x"
+                android:background="@color/mine_bg" />
+
+            <RelativeLayout
+                android:id="@+id/rl_home_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/main_padding_2x">
+
+                <ImageView
+                    android:id="@+id/iv_orange_home_point"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/charger_route_plan_orange_point" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_margin_1x"
+                    android:layout_toRightOf="@+id/iv_orange_home_point"
+                    android:text="@string/charger_route_plan_go_home" />
+
+                <TextView
+                    android:id="@+id/tv_home_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/iv_home_address_turn"
+                    android:text="@string/charger_route_plan_set_home_address" />
+
+                <ImageView
+                    android:id="@+id/iv_home_address_turn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/main_margin_1x"
+                    android:src="@drawable/mine_icon_right_arrow_gray" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/main_margin_2x"
+                android:background="@color/mine_bg" />
+
+            <RelativeLayout
+                android:id="@+id/rl_company_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/main_padding_2x">
+
+                <ImageView
+                    android:id="@+id/iv_green_company_point"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/charger_route_plan_green_point" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_margin_1x"
+                    android:layout_toRightOf="@+id/iv_green_company_point"
+                    android:text="@string/charger_route_plan_go_company" />
+
+                <TextView
+                    android:id="@+id/tv_company_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/iv_company_address_turn"
+                    android:text="@string/charger_route_plan_set_company_address" />
+
+                <ImageView
+                    android:id="@+id/iv_company_address_turn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/main_margin_1x"
+                    android:src="@drawable/mine_icon_right_arrow_gray" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_334046"
+            android:text="开始路径规划"
+            android:textColor="@color/text_color_ffffff"
+            android:textSize="@dimen/textsize_14sp" />
+    </LinearLayout>
+
+    <include layout="@layout/toolbar_include_shadow" />
+
+</RelativeLayout>

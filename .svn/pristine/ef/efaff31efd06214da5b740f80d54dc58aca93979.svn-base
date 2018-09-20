@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_toolbar_height"
+        android:background="@color/main_color"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/main_status_height">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/main_margin_1.5x"
+            android:background="@drawable/charger_btn_ripple_orangey"
+            android:padding="@dimen/main_padding_1x"
+            android:src="@drawable/charger_back_arrow"
+            android:visibility="visible" />
+
+        <com.pinnet.chargerapp.widget.ClearEditText
+            android:id="@+id/cet_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/main_margin_0.5x"
+            android:layout_toLeftOf="@+id/tv_right_search"
+            android:layout_toRightOf="@+id/iv_back"
+            android:background="@drawable/toolbar_searc_bg"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawablePadding="@dimen/main_padding_0.5x"
+            android:gravity="center_vertical"
+            android:hint="@string/charger_home_search_hint"
+            android:paddingLeft="@dimen/main_padding_1x"
+            android:paddingRight="@dimen/main_padding_1x"
+            android:textColor="@color/text_color_ff9933"
+            android:textSize="@dimen/textsize_13sp" />
+
+        <TextView
+            android:id="@+id/tv_right_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/main_margin_1x"
+            android:background="@drawable/charger_btn_ripple_orangey"
+            android:text="搜索"
+            android:textColor="@color/text_color_ffffff"
+            android:textSize="@dimen/textsize_18sp" />
+    </RelativeLayout>
+
+    <include layout="@layout/toolbar_include_shadow" />
+</RelativeLayout>
